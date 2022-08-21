@@ -130,7 +130,7 @@ export default function Home() {
 
   useEffect(() => {
     if (todos.length === 0) {
-      if (localStorage.getItem("items").length !== 0) {
+      if (localStorage.getItem("items") !== null) {
         const wave = JSON.parse(localStorage.getItem("items"));
         wave.forEach((lukluk) => {
           setTodos((current) => [...current, lukluk]);
